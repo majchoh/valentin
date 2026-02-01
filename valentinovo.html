@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentinovo 🐱❤️</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', monospace;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffe6ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    #cat {
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .talking {
+      animation: float 0.8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+
+    #text-box {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 16px;
+      min-height: 70px;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #ff7aa2;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    #result-image {
+      margin: 20px auto 0;
+      width: 220px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img id="cat" src="cat1.jpg" alt="Cat" />
+
+    <div id="text-box" aria-live="polite"></div>
+
+    <div class="buttons" id="buttons"></div>
+
+    <img id="result-image" src="" alt="Result cat" />
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script src="script.js"></script>
+  <script src="valentinovo.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@ const cat = document.getElementById("cat");
 const resultImage = document.getElementById("result-image");
 
 // ===== AUDIO =====
-const talkSound = new Audio("talk.mp3");
+
 const sadMusic = new Audio("sad.mp3");
 const happyMusic = new Audio("kittygo.mp3");
 
@@ -153,5 +153,6 @@ function noAnswer() {
   screenShake();
   typeText("😿 ...", () => addButton("Premislila sem si", step3));
 }
+
 
 start();
